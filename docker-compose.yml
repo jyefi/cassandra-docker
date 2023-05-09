@@ -5,5 +5,11 @@ services:
       - "9042:9042"
     volumes:
       - ${PWD}/cassandra/data:/var/lib/cassandra
-      - ${PWD}/cassandra/scripts:/scripts
     command: ["cassandra", "-f"]
+
+  scripts:
+    image: cassandra:latest
+    volumes:
+      - ${PWD}/cassandra/scripts:/scripts
+    depends_on:
+      - cassandra
