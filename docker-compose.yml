@@ -10,6 +10,10 @@ services:
   scripts:
     image: cassandra:latest
     volumes:
+      - ./scripts:/scripts
       - ${PWD}/cassandra/scripts:/scripts
     depends_on:
       - cassandra
+    stdin_open: true
+    tty: true
+    command: ["cqlsh"]
