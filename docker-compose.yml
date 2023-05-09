@@ -10,9 +10,9 @@ services:
     command: ["cassandra", "-f"]
 
   scripts:
-    build: 
-      context: ./scripts
-      dockerfile: Dockerfile
+    image: cassandra:latest
+    volumes:
+      - ./scripts:/scripts
     volumes:
       - ${PWD}/cassandra/scripts:/scripts
     depends_on:
