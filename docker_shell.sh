@@ -20,7 +20,7 @@ docker exec -it cassandra-lab cqlsh
 
 echo "docker stop cassandra-lab">stop_cassandra.sh
 echo "docker rm cassandra-lab">>stop_cassandra.sh
-echo "rm $(realpath $0)">>stop_cassandra.sh
+echo "rm stop_cassandra.sh">>stop_cassandra.sh
 
 echo "To eliminates docker run \"sh stop_cassandra.sh\""
 
