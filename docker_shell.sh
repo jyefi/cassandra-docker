@@ -7,8 +7,14 @@ fi
 mkdir -p cassandra/data
 mkdir -p cassandra/scripts
 
-# Download "docker-compose.yml" file from GitHub
-curl -o docker-compose.yml https://raw.githubusercontent.com/jyefi/cassandra-docker/main/docker-compose.yml
+# Starts Cassandra Docker
+docker run -d --name cassandra-lab -v $(pwd)/cassandra/data:/var/lib/cassandra -v $(pwd)/cassandra/scripts:/scripts cassandra:latest
 
-# Executes docker-compose up
-docker-compose up
+echo "Waiting 4 Cassandra starts..."
+while ! docker logs cassandra-lab | grep -q "Startup complete"; do
+    sleep 1
+done
+
+# Executes cqlsh console
+docker exec -it cassandra-lab cqlsh
+
