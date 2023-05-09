@@ -8,7 +8,7 @@ mkdir -p cassandra/data
 mkdir -p cassandra/scripts
 
 # Download "docker-compose.yml" file from GitHub
-curl -o cassandra/docker-compose.yml https://raw.githubusercontent.com/jyefi/cassandra-docker/docker-compose.yml
+curl -o cassandra/docker-compose.yml https://raw.githubusercontent.com/jyefi/cassandra-docker/main/docker-compose.yml
 
 # Executes docker-compose up
 cd cassandra
