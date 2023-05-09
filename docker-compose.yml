@@ -1,0 +1,20 @@
+version: "3.9"
+
+services:
+  cassandra:
+    image: cassandra:latest
+    ports:
+      - "9042:9042"
+    volumes:
+      - ${PWD}/cassandra/data:/var/lib/cassandra
+    command: ["cassandra", "-f"]
+
+  scripts:
+    build: 
+      context: ./scripts
+      dockerfile: Dockerfile
+    volumes:
+      - ${PWD}/cassandra/scripts:/scripts
+    depends_on:
+      - cassandra
+    command: ["cqlsh"]
