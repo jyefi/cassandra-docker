@@ -18,3 +18,10 @@ done
 # Executes cqlsh console
 docker exec -it cassandra-lab cqlsh
 
+echo "docker stop cassandra-lab">stop_cassandra.sh
+echo "docker rm cassandra-lab">>stop_cassandra.sh
+
+echo "To eliminates docker run \"sh stop_cassandra.sh\""
+
+#harakiri
+rm "$0"
