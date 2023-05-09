@@ -11,5 +11,4 @@ mkdir -p cassandra/scripts
 curl -o docker-compose.yml https://raw.githubusercontent.com/jyefi/cassandra-docker/main/docker-compose.yml
 
 # Executes docker-compose up
-cd cassandra
 docker-compose up
