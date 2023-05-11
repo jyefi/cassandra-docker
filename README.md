@@ -13,9 +13,7 @@ To stop and remove docker:
 sh stop_cassandra.sh
 
 The scripts makes 3 directories:
-<p>
-``-- Cassandra``
-``----data``
-``----scripts``
-</p>
+        -- Cassandra
+        ----data
+        ----scripts
 and make volumes on data and scripts
