@@ -5,8 +5,8 @@ docker shell and compose to get cassandra services
 
 ### Start
 To get Cassandra docker and run the cqlsh console:
-~
-wget https://links.uv.es/jaiyever/docker.sh && sh docker.sh
+
+``wget https://links.uv.es/jaiyever/docker.sh && sh docker.sh``
 
 ### Stop
 To stop and remove docker:
