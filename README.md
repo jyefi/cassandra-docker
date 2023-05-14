@@ -1,7 +1,7 @@
 # cassandra-docker
 docker shell and compose to get cassandra services
 
-## How to usse
+## How to use
 
 ### Start
 To get Cassandra docker and run the cqlsh console:
